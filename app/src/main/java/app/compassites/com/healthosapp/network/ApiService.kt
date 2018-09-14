@@ -26,4 +26,10 @@ interface ApiService {
                           @Header(Constants.AUTHORIZATION_KEY)
                           auth: String?): Call<MedicineDetail>
 
+    @GET("medicines/brands")
+    fun getMedicines(
+            @QueryMap pagingMap: Map<String, String>,
+            @Header(Constants.AUTHORIZATION_KEY)
+            auth: String?): Call<List<Medicine>>
+
 }

@@ -5,16 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import app.compassites.com.healthosapp.R
-import app.compassites.com.healthosapp.model.Medicine
 import kotlinx.android.synthetic.main.drawer_items.view.*
 
-class AllMedicineAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
-    var itemList = ArrayList<Medicine>()
+class DrawerItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    var itemList = ArrayList<DrawerItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return DrawerViewHolder(inflater.inflate(R.layout.medicine_item, parent, false))
+        return DrawerViewHolder(inflater.inflate(R.layout.drawer_items, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -22,9 +20,10 @@ class AllMedicineAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        var item = itemList[position]
+        var item = itemList.get(position)
         val viewHolder = holder as DrawerViewHolder
-
+        viewHolder.tvType.text = item.type.toString()
+        viewHolder.tvTitle.text = item.title
 
     }
 
@@ -34,7 +33,7 @@ class AllMedicineAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     }
 
-    fun updateItems(itemList: ArrayList<Medicine>) {
+    fun updateItems(itemList: ArrayList<DrawerItem>) {
         this.itemList = itemList
         notifyDataSetChanged()
     }

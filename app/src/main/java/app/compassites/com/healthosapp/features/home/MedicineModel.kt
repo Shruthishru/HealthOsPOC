@@ -13,6 +13,7 @@ class MedicineModel {
 
     val medicineLiveData = MutableLiveData<List<Medicine>>()
     val medicineDetail = MutableLiveData<MedicineDetail>()
+    val allMedicines = MutableLiveData<List<Medicine>>()
 
     fun getMedicines(auth: String?, query: String) {
 
@@ -46,6 +47,31 @@ class MedicineModel {
 
                 })
 
+    }
+
+    fun getLiveDataForAllMedicine(): MutableLiveData<List<Medicine>> {
+        return allMedicines
+    }
+
+    fun fetchMedicinesForPage(pageNumber: Int, pageLimit: Int, auth: String?) {
+
+        val queryMap = HashMap<String, String>()
+        queryMap.put("page", pageNumber.toString())
+        queryMap.put("size", pageLimit.toString())
+
+        RetrofitManager.getApiService().getMedicines(queryMap, auth)
+                .enqueue(object : Callback<List<Medicine>> {
+
+                    override fun onFailure(call: Call<List<Medicine>>?, t: Throwable?) {
+                        Log.e("error", "ERROR :" + t)
+                    }
+
+                    override fun onResponse(call: Call<List<Medicine>>?, response: Response<List<Medicine>>?) {
+                        Log.i("response", "List : " + response!!.body())
+                        allMedicines.postValue(response.body())
+                    }
+
+                })
     }
 
 

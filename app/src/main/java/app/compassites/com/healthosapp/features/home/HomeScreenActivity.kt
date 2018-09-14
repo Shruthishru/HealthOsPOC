@@ -10,9 +10,11 @@ import android.view.View
 import app.compassites.com.healthosapp.Constants
 import app.compassites.com.healthosapp.R
 import app.compassites.com.healthosapp.base.BaseActivity
+import app.compassites.com.healthosapp.features.drawer.DrawerFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeScreenActivity : BaseActivity(), DrawerLayout.DrawerListener {
+
 
     private fun setupToolBar() {
         setSupportActionBar(tb_home)
@@ -51,7 +53,13 @@ class HomeScreenActivity : BaseActivity(), DrawerLayout.DrawerListener {
 
         initState()
 
+        loadDrawer()
+
         openRecentSearch()
+    }
+
+    private fun loadDrawer() {
+        setFragment(R.id.fl_drawer_container,DrawerFragment.newInstance(),false,Constants.FRAGMENT_REPLACE)
     }
 
     private fun initState() {
