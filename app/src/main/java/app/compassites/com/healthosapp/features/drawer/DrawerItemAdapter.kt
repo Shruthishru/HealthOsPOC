@@ -8,7 +8,8 @@ import app.compassites.com.healthosapp.R
 import kotlinx.android.synthetic.main.drawer_items.view.*
 
 class DrawerItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    lateinit var itemList: List<DrawerItem>
+    var itemList = ArrayList<DrawerItem>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return DrawerViewHolder(inflater.inflate(R.layout.drawer_items, parent, false))
@@ -30,5 +31,10 @@ class DrawerItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         val tvType = itemView.tv_type
         val tvTitle = itemView.tv_title
 
+    }
+
+    fun updateItems(itemList: ArrayList<DrawerItem>) {
+        this.itemList = itemList
+        notifyDataSetChanged()
     }
 }
