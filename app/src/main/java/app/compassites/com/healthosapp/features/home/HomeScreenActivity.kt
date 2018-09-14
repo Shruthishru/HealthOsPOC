@@ -10,6 +10,7 @@ import android.view.View
 import app.compassites.com.healthosapp.Constants
 import app.compassites.com.healthosapp.R
 import app.compassites.com.healthosapp.base.BaseActivity
+import app.compassites.com.healthosapp.features.drawer.AllMedicineFragment
 import app.compassites.com.healthosapp.features.drawer.DrawerFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -58,9 +59,6 @@ class HomeScreenActivity : BaseActivity(), DrawerLayout.DrawerListener {
         openRecentSearch()
     }
 
-    private fun loadDrawer() {
-        setFragment(R.id.fl_drawer_container,DrawerFragment.newInstance(),false,Constants.FRAGMENT_REPLACE)
-    }
 
     private fun initState() {
         viewModel.viewState.observe(this, Observer {
@@ -69,11 +67,19 @@ class HomeScreenActivity : BaseActivity(), DrawerLayout.DrawerListener {
                 HomeViewState.OPEN_MEDICINE_SEARCH -> {
                     openMedicineSearch()
                 }
+
+                HomeViewState.OPEN_ALL_MEDICINE -> {
+                    openALlMedicines()
+                }
                 else -> {
 
                 }
             }
         })
+    }
+
+    private fun openALlMedicines() {
+        setFragment(R.id.fl_home_container, AllMedicineFragment.newInstance(), false, Constants.FRAGMENT_REPLACE)
     }
 
     private fun openMedicineSearch() {
@@ -84,9 +90,15 @@ class HomeScreenActivity : BaseActivity(), DrawerLayout.DrawerListener {
         setFragment(R.id.fl_home_container, RecentSearchFragment.newInstance(), false, Constants.FRAGMENT_REPLACE)
     }
 
+    private fun loadDrawer() {
+        setFragment(R.id.fl_drawer_container, DrawerFragment.newInstance(), false, Constants.FRAGMENT_REPLACE)
+    }
+
+
     override fun initViewModel() {
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
     }
+
 
     override fun getLayout(): Int {
         return R.layout.activity_home
@@ -100,6 +112,8 @@ class HomeScreenActivity : BaseActivity(), DrawerLayout.DrawerListener {
             val currentFragment = supportFragmentManager.findFragmentById(R.id.fl_home_container)
 
             if (currentFragment is MedicineSearchFragment) {
+                openRecentSearch()
+            } else if (currentFragment is AllMedicineFragment) {
                 openRecentSearch()
             } else {
                 super.onBackPressed()

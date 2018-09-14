@@ -7,9 +7,19 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import app.compassites.com.healthosapp.R
 import app.compassites.com.healthosapp.base.BaseFragment
+import app.compassites.com.healthosapp.features.home.HomeViewModel
+import app.compassites.com.healthosapp.features.home.HomeViewState
 import kotlinx.android.synthetic.main.fragment_drawer.*
 
-class DrawerFragment : BaseFragment() {
+class DrawerFragment : BaseFragment(), DraweritemCallBack {
+
+    override fun onItemClick(item: DrawerItem) {
+        if (item.type == 1) {
+            homeViewModel.viewState.postValue(HomeViewState.OPEN_ALL_MEDICINE)
+        } else if (item.type == 2) {
+            homeViewModel.viewState.postValue(HomeViewState.OPEN_ALL_EXERCISE)
+        }
+    }
 
     companion object {
         fun newInstance(): Fragment {
@@ -19,7 +29,9 @@ class DrawerFragment : BaseFragment() {
     }
 
     lateinit var viewModel: DrawerViewModel
-    var drawerAdapter = DrawerItemAdapter()
+    lateinit var homeViewModel: HomeViewModel
+
+    var drawerAdapter = DrawerItemAdapter(this)
 
     override fun initViews() {
         rv_drawer_items.layoutManager = LinearLayoutManager(context)
@@ -44,6 +56,7 @@ class DrawerFragment : BaseFragment() {
 
     override fun initViewModel() {
         viewModel = ViewModelProviders.of(activity!!).get(DrawerViewModel::class.java)
+        homeViewModel = ViewModelProviders.of(activity!!).get(HomeViewModel::class.java)
     }
 
     override fun getLayout(): Int {

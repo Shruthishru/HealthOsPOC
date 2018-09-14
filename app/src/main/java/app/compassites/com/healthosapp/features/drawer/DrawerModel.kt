@@ -10,10 +10,10 @@ class DrawerModel {
 
     fun initDrawerItems() {
         val items = ArrayList<DrawerItem>()
-        items.add(DrawerItem(1,"All Medicines"))
-        items.add(DrawerItem(1,"All Medicines"))
-        items.add(DrawerItem(1,"All Medicines"))
-        items.add(DrawerItem(1,"All Medicines"))
+        items.add(DrawerItem(1, "All Medicines"))
+        items.add(DrawerItem(2, "All Medicines"))
+        items.add(DrawerItem(3, "All Medicines"))
+        items.add(DrawerItem(4, "All Medicines"))
         adapterLiveData.postValue(items)
     }
 

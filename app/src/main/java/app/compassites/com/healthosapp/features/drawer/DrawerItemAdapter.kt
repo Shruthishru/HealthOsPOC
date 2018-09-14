@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import app.compassites.com.healthosapp.R
 import kotlinx.android.synthetic.main.drawer_items.view.*
 
-class DrawerItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class DrawerItemAdapter(private val itemClickCallback: DraweritemCallBack) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var itemList = ArrayList<DrawerItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -23,6 +23,10 @@ class DrawerItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         var item = itemList.get(position)
         val viewHolder = holder as DrawerViewHolder
         viewHolder.tvTitle.text = item.title
+
+        viewHolder.tvTitle.setOnClickListener {
+            itemClickCallback.onItemClick(item)
+        }
 
     }
 

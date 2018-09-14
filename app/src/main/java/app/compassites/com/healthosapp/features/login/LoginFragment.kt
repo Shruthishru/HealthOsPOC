@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v4.app.Fragment
 import android.util.Log
+import android.widget.Toast
 import app.compassites.com.healthosapp.Constants
 import app.compassites.com.healthosapp.DataManager
 import app.compassites.com.healthosapp.R
@@ -78,6 +79,8 @@ class LoginFragment : BaseFragment() {
                 navigateToHome()
             })
             Log.i("google account", "account" + acct)
+        } else {
+            Toast.makeText(activity!!, "Failed to get Google instance", Toast.LENGTH_SHORT).show()
         }
     }
 

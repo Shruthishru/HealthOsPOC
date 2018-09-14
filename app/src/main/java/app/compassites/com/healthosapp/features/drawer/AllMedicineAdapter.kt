@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import app.compassites.com.healthosapp.R
 import app.compassites.com.healthosapp.model.Medicine
-import kotlinx.android.synthetic.main.drawer_items.view.*
 
 class AllMedicineAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -29,8 +28,6 @@ class AllMedicineAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     class DrawerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvType = itemView.tv_type
-        val tvTitle = itemView.tv_title
 
     }
 
