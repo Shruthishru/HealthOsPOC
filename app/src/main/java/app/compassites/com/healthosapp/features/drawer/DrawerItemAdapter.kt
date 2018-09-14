@@ -22,13 +22,11 @@ class DrawerItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         var item = itemList.get(position)
         val viewHolder = holder as DrawerViewHolder
-        viewHolder.tvType.text = item.type.toString()
         viewHolder.tvTitle.text = item.title
 
     }
 
     class DrawerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvType = itemView.tv_type
         val tvTitle = itemView.tv_title
 
     }

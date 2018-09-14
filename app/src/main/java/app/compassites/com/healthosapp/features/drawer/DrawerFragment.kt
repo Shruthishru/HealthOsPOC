@@ -3,6 +3,7 @@ package app.compassites.com.healthosapp.features.drawer
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.support.v4.app.Fragment
+import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import app.compassites.com.healthosapp.R
 import app.compassites.com.healthosapp.base.BaseFragment
@@ -23,6 +24,8 @@ class DrawerFragment : BaseFragment() {
     override fun initViews() {
         rv_drawer_items.layoutManager = LinearLayoutManager(context)
         rv_drawer_items.adapter = drawerAdapter
+        val itemDecoration = DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
+        rv_drawer_items.addItemDecoration(itemDecoration)
 
 
         getLiveDataForDrawer()
