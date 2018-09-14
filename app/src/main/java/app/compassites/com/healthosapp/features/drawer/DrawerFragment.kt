@@ -8,7 +8,7 @@ class DrawerFragment : BaseFragment() {
 
     }
 
-    override fun initViewModel(){
+    override fun initViewModel() {
     }
 
     override fun getLayout(): Int {
