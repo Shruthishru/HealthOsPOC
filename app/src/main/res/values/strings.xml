@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">HealthOs</string>
-    <string name="api_key">5044bb9cff535dd2f620686e2d3277a095879ba7</string>
+    <string name="api_key">3b0ce9f326f36e3f5695ae881cbfe8e0f55ecd55</string>
     <string name="search">Search here</string>
     <string name="search_null">No search available</string>
     <string name="search_medicine">Search Medicine</string>
     <string name="recent_search">Recent Search</string>
     <string name="action_search">Search</string>
-    <string name="current_date">Current Date</string>
-    <string name="current_time">Current Time</string>
+    <string name="current_time">Current Date and Time</string>
     <string name="medicine_detail">Medicine Detail</string>
 </resources>

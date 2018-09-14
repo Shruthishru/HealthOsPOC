@@ -11,12 +11,14 @@ import app.compassites.com.healthosapp.base.BaseActivity
 import app.compassites.com.healthosapp.features.home.HomeScreenActivity
 import app.compassites.com.healthosapp.features.login.OnBoardViewState.OPEN_HOME
 import app.compassites.com.healthosapp.features.login.OnBoardViewState.OPEN_LOGIN
+import com.crashlytics.android.Crashlytics
+import io.fabric.sdk.android.Fabric
 
 class OnBoardActivity : BaseActivity() {
 
     override fun initViews() {
         listenState()
-
+        Fabric.with(this, Crashlytics())
         openSplashScreen()
     }
 

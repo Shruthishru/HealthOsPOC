@@ -14,11 +14,6 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeScreenActivity : BaseActivity(), DrawerLayout.DrawerListener {
 
-    private fun loadDrawer() {
-//        setFragment(R.id.fl_drawer_container, DrawerFragment.newInstance(), false, FRAGMENT_REPLACE)
-    }
-
-
     private fun setupToolBar() {
         setSupportActionBar(tb_home)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_drawer_menu)

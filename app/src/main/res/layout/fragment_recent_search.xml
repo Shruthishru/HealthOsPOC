@@ -18,6 +18,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
         android:layout_weight=".2">
 
         <android.support.v7.widget.CardView
@@ -32,20 +33,6 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
-
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/TextStyleHeading"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/current_date" />
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/tv_date"
-                    style="@style/TextStyleContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp" />
 
                 <android.support.v7.widget.AppCompatTextView
                     style="@style/TextStyleHeading"

@@ -8,6 +8,7 @@ import app.compassites.com.healthosapp.DataManager
 import app.compassites.com.healthosapp.R
 import app.compassites.com.healthosapp.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_recent_search.*
+import java.util.*
 
 
 class RecentSearchFragment : BaseFragment() {
@@ -23,6 +24,12 @@ class RecentSearchFragment : BaseFragment() {
         iv_main_logo.animation = AnimationUtils.loadAnimation(activity, R.anim.anim_zoom_in_out)
         iv_main_logo.animation.start()
         updateRecentMedicine()
+        updateCurrentDateTime()
+    }
+
+    private fun updateCurrentDateTime() {
+        val currentTime = Calendar.getInstance().time
+        tv_time.setText(currentTime.toString())
     }
 
     private fun updateRecentMedicine() {

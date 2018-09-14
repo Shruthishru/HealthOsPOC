@@ -29,6 +29,7 @@ class MedicineDetailActivity : BaseActivity() {
         medicineViewModel.getLiveData().observe(this, Observer {
             tv_medicine_name.setText("" + it?.name)
             tv_medicine_form.setText("" + it?.form)
+            tv_medicine_unit.setText(""+it?.standardUnits)
             tv_medicine_package_form.setText("" + it?.packageForm)
             tv_medicine_price.setText("" + it?.price)
             tv_medicine_size.setText("" + it?.size)
@@ -47,7 +48,7 @@ class MedicineDetailActivity : BaseActivity() {
 
     private fun extractBundleData() {
 
-        if (intent != null && intent.extras != null && intent.extras != null && intent.extras.containsKey(Constants.MEDICINE)) {
+        if (intent != null && intent.extras != null && intent.extras.containsKey(Constants.MEDICINE)) {
             medicineID = intent.extras.getString(Constants.MEDICINE)
         } else {
             Toast.makeText(this, "unable to get Medicine", Toast.LENGTH_SHORT).show()
