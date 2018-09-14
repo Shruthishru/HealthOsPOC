@@ -4,6 +4,7 @@ import app.compassites.com.healthosapp.Constants
 import app.compassites.com.healthosapp.model.AuthTokenRequest
 import app.compassites.com.healthosapp.model.AuthTokenResponse
 import app.compassites.com.healthosapp.model.Medicine
+import app.compassites.com.healthosapp.model.MedicineDetail
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -19,5 +20,10 @@ interface ApiService {
     fun getAllMedicines(@Path("query") query: String,
                         @Header(Constants.AUTHORIZATION_KEY)
                         authToken: String?): Call<List<Medicine>>
+
+    @GET("medicines/brands/{medicine_id}")
+    fun getMedicineDetail(@Path("medicine_id") medicineID: String,
+                          @Header(Constants.AUTHORIZATION_KEY)
+                          auth: String?): Call<MedicineDetail>
 
 }

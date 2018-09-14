@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
 import app.compassites.com.healthosapp.Constants
 import app.compassites.com.healthosapp.Constants.Companion.MEDICINE
 import app.compassites.com.healthosapp.DataManager
@@ -25,7 +27,7 @@ class MedicineSearchFragment : BaseFragment(), TextWatcher, MedicineAdapterClick
     override fun onItemClick(medicine: Medicine) {
         Log.e("", "item click")
         val intent = Intent(activity!!, MedicineDetailActivity::class.java)
-        intent.putExtra(MEDICINE, medicine)
+        intent.putExtra(MEDICINE, medicine.medicine_id)
         startActivity(intent)
     }
 
@@ -68,6 +70,7 @@ class MedicineSearchFragment : BaseFragment(), TextWatcher, MedicineAdapterClick
     override fun getLayout(): Int {
         return R.layout.fragment_medicine_search
     }
+
 
     companion object {
         fun newInstance(): Fragment {

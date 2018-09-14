@@ -3,6 +3,7 @@ package app.compassites.com.healthosapp.features.home
 import android.arch.lifecycle.MutableLiveData
 import android.util.Log
 import app.compassites.com.healthosapp.model.Medicine
+import app.compassites.com.healthosapp.model.MedicineDetail
 import app.compassites.com.healthosapp.network.RetrofitManager
 import retrofit2.Call
 import retrofit2.Callback
@@ -11,6 +12,7 @@ import retrofit2.Response
 class MedicineModel {
 
     val medicineLiveData = MutableLiveData<List<Medicine>>()
+    val medicineDetail = MutableLiveData<MedicineDetail>()
 
     fun getMedicines(auth: String?, query: String) {
 
@@ -27,6 +29,23 @@ class MedicineModel {
                     }
 
                 })
+    }
+
+    fun getMedicineDetails(medicineID: String, auth: String?) {
+        RetrofitManager.getApiService().getMedicineDetail(medicineID, auth)
+                .enqueue(object : Callback<MedicineDetail> {
+                    override fun onFailure(call: Call<MedicineDetail>?, t: Throwable?) {
+                        Log.e("error", "ERROR :" + t)
+                    }
+
+                    override fun onResponse(call: Call<MedicineDetail>?, response: Response<MedicineDetail>?) {
+                        Log.i("response", "List : " + response!!.body())
+                        medicineDetail.postValue(response.body())
+                    }
+
+
+                })
+
     }
 
 

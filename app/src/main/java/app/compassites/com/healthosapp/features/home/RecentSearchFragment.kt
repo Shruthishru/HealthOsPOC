@@ -2,6 +2,7 @@ package app.compassites.com.healthosapp.features.home
 
 import android.arch.lifecycle.ViewModelProviders
 import android.support.v4.app.Fragment
+import android.view.animation.AnimationUtils
 import app.compassites.com.healthosapp.Constants
 import app.compassites.com.healthosapp.DataManager
 import app.compassites.com.healthosapp.R
@@ -19,7 +20,8 @@ class RecentSearchFragment : BaseFragment() {
         btn_search_medicine.setOnClickListener {
             homeViewModel.viewState.postValue(HomeViewState.OPEN_MEDICINE_SEARCH)
         }
-
+        iv_main_logo.animation = AnimationUtils.loadAnimation(activity, R.anim.anim_zoom_in_out)
+        iv_main_logo.animation.start()
         updateRecentMedicine()
     }
 

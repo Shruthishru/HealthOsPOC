@@ -17,7 +17,8 @@ data class Medicine(
         var size: String,
         var manufacturer: String,
         var constituents: List<Constituent>,
-        var schedule: Schedule
+        var schedule: Schedule,
+        var medicine_id: String
 ) : Parcelable
 
 @Parcelize

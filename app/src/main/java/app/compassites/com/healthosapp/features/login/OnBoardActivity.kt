@@ -49,11 +49,13 @@ class OnBoardActivity : BaseActivity() {
     }
 
     private fun openLoginScreen() {
-        setFragment(R.id.fl_login_container, LoginFragment.newInstance(), false, Constants.FRAGMENT_REPLACE)
+        setFragment(R.id.fl_login_container, LoginFragment.newInstance(), false,
+                Constants.FRAGMENT_REPLACE)
     }
 
     private fun openSplashScreen() {
-        setFragment(R.id.fl_login_container, SplashFragment.newInstance(), false, Constants.FRAGMENT_REPLACE)
+        setFragment(R.id.fl_login_container, SplashFragment.newInstance(), false,
+                Constants.FRAGMENT_REPLACE)
     }
 
     lateinit var viewModel: OnBoardViewModel

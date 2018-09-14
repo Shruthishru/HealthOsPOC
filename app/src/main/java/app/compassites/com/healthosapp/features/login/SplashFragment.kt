@@ -11,7 +11,7 @@ import app.compassites.com.healthosapp.base.BaseFragment
 
 class SplashFragment : BaseFragment() {
 
-    lateinit var viewModel: SplasViewModel
+    lateinit var viewModel: SplashViewModel
 
     lateinit var onBoardViewModel: OnBoardViewModel
 
@@ -26,7 +26,7 @@ class SplashFragment : BaseFragment() {
     }
 
     override fun initViewModel() {
-        viewModel = ViewModelProviders.of(this).get(SplasViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(SplashViewModel::class.java)
         onBoardViewModel = ViewModelProviders.of(activity!!).get(OnBoardViewModel::class.java)
     }
 

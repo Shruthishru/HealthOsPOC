@@ -4,4 +4,9 @@
     <string name="search">Search here</string>
     <string name="search_null">No search available</string>
     <string name="search_medicine">Search Medicine</string>
+    <string name="recent_search">Recent Search</string>
+    <string name="action_search">Search</string>
+    <string name="current_date">Current Date</string>
+    <string name="current_time">Current Time</string>
+    <string name="medicine_detail">Medicine Detail</string>
 </resources>

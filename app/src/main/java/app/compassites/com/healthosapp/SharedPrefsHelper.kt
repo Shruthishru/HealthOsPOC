@@ -53,17 +53,4 @@ class SharedPrefsHelpers constructor(private val sharedPreferences: SharedPrefer
         sharedPreferences.edit().clear().apply()
     }
 
-    companion object {
-
-        val AUTH_TOKEN = "auth_token_tag"
-        val USER_EMAIL = "user_email_tag"
-        val LOGIN_TYPE = "user_login_type"
-        val USER_NAME = "user_name"
-        val USER_PASSWORD = "user_password"
-        val SEARCH_QUERY = "search_tag"
-        val INTERVIWEE = "interviewee"
-        val STATUS = "watchLaterStatus"
-        val BTN_STATUS = "btn_status"
-    }
-
 }

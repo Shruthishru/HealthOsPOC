@@ -17,4 +17,21 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="CircularProgressBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextStyleHeading">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="TextStyleContent">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
 </resources>

@@ -3,145 +3,331 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+    android:gravity="center"
     android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        style="@style/TextStyleHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine_detail" />
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="10dp">
 
-        <LinearLayout
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
 
-                <android.support.v7.widget.AppCompatTextView
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Name"
-                    android:textColor="@color/colorBlack" />
+                    android:layout_height="wrap_content">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/tv_medicine_name"
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Name : " />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack" />
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_medicine_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Name : " />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Name : " />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Name : " />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Name : " />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Name : " />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        </android.support.v4.widget.NestedScrollView>
+        <!--  <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="5dp"
+              android:orientation="vertical">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Form"
-                    android:textColor="@color/colorBlack" />
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/tv_medicine_form"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack" />
-            </LinearLayout>
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Name :"
+                      android:textColor="@color/colorBlack" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_medicine_name"
+                      style="@style/TextStyleContent"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="StandardUnits"
-                    android:textColor="@color/colorBlack" />
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/tv_medicine_unit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack" />
-            </LinearLayout>
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Form :"
+                      android:textColor="@color/colorBlack" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_medicine_form"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="PackageForm"
-                    android:textColor="@color/colorBlack" />
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/tv_medicine_package_form"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack" />
-            </LinearLayout>
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="StandardUnits :"
+                      android:textColor="@color/colorBlack" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_medicine_unit"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Price"
-                    android:textColor="@color/colorBlack" />
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/tv_medicine_price"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack" />
-            </LinearLayout>
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="PackageForm :"
+                      android:textColor="@color/colorBlack" />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_medicine_package_form"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
+
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Price :"
+                      android:textColor="@color/colorBlack" />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_medicine_price"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Size"
-                    android:textColor="@color/colorBlack" />
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Size :"
+                      android:textColor="@color/colorBlack" />
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/tv_medicine_size"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack" />
-            </LinearLayout>
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_medicine_size"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Manufacturer"
-                    android:textColor="@color/colorBlack" />
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Manufacturer :"
+                      android:textColor="@color/colorBlack" />
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/tv_medicine_manufacturer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack" />
-            </LinearLayout>
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_medicine_manufacturer"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
 
-        </LinearLayout>
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
+
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Unit Price :"
+                      android:textColor="@color/colorBlack" />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_unit_price"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
+
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Group Name :"
+                      android:textColor="@color/colorBlack" />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_group_name"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
+
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="MRP :"
+                      android:textColor="@color/colorBlack" />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_mrp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="3dp"
+                  android:orientation="horizontal">
+
+                  <android.support.v7.widget.AppCompatTextView
+                      style="@style/TextStyleHeading"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Per Unit :"
+                      android:textColor="@color/colorBlack" />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/tv_per_unit"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorBlack" />
+              </LinearLayout>
+          </LinearLayout>-->
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

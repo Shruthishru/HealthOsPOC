@@ -20,11 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".features.search.SearchActivity"></activity>
         <activity
             android:name=".features.home.HomeScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/DashBoardTheme" />
+
         <activity
             android:name=".features.medicinedetail.MedicineDetailActivity"
             android:screenOrientation="portrait"

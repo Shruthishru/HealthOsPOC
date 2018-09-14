@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import app.compassites.com.healthosapp.R
+import app.compassites.com.healthosapp.features.utils.AnimationUtils
 import app.compassites.com.healthosapp.model.Medicine
 import kotlinx.android.synthetic.main.item_content_layout.view.*
 
@@ -32,6 +33,7 @@ class MedicineListAdapter(val itemClick: MedicineAdapterClick) : RecyclerView.Ad
         viewHolder.llItem.setOnClickListener {
             itemClick.onItemClick(item)
         }
+        AnimationUtils.animateView(viewHolder.llItem, "translationX", 1000f, 0f, 500)
     }
 
     override fun getItemCount(): Int {
